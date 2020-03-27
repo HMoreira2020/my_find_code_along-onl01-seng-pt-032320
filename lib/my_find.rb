@@ -4,7 +4,7 @@ def my_find(collection)
   i = 0 
   while i < collection.length 
     if yield(collection[i])  #i passed to block below, and if i is divisible by 3 and 5 then..
-      return collection[i] #return collection[1]. this way it builds a new array of values that make the block return to true and this is why this method is the find method. 
+      return collection[i] #return collection[1]. it returns the new array with the first value that made the block return to true. and because no code will execute after return it will stop after the first element that returns true. 
     end 
     i += 1 
   end 
