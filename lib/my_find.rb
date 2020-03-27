@@ -3,8 +3,8 @@ require 'pry'
 def my_find(collection)
   i = 0 
   while i < collection.length 
-    if yield(collection[i])  #i passed to block below, and if i is divisible by 3 and 5 then..
-      return collection[i] #return collection[1]. the return value of this method is the first element that made the block return to true. and because no code will execute after return it will stop after the first element that returns true. if it returns false, it will continue to next element in the array until it gets a true. 
+    if yield(collection[i])     #i passed to block below, and if i is divisible by 3 and 5 then..
+      return collection[i]    #return collection[1]. the return value of this method is the first element that made the block return to true. and because no code will execute after return it will stop after the first element that returns true. if it returns false, it will continue to next element in the array until it gets a true. 
     end 
     i += 1 
   end 
